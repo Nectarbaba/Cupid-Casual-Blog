@@ -1,0 +1,440 @@
+/* =========================
+  CSS Variables
+  ========================= */
+:root {
+  --primary-color:  #490c0c;
+  --secondary-color: #410808;
+  --text-color: #ffffff;
+}
+
+/* =========================
+  Style Reset
+  ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* =========================
+  Body Design
+  ========================= */
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* =========================
+  Navigation/Header Design
+  ========================= */
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--text-color);
+  margin: 0 0 1rem 0;
+}
+
+/* Hamburger menu toggle button for mobile */
+.menu-toggle {
+  display: block;
+  position: absolute;
+  right: 15px;
+  margin: 2rem 0 1rem 0;
+  background-color: inherit;
+}
+
+/* General button styles */
+button  {
+  border: none;
+  cursor: pointer;
+}
+
+/* Hamburger icon bars */
+.toggle {
+  width: 30px;
+  height: 4px;
+  margin-bottom: 0.3rem;
+  background-color: var(--text-color);
+}
+
+/* =========================
+  Navigation Subheadings
+  ========================= */
+.topic_heading {
+  position: relative;
+  margin: 0 0 1rem 0;
+  background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Dropdown sub-menu */
+.sub-heading {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 20vw;
+}
+
+.sub-heading li {
+  padding: 0.9rem;
+  list-style: none;
+  border: 1px solid var(--text-color);
+}
+
+/* Sub-menu hover effect */
+.sub-heading li:hover {
+  padding: 1.2rem;
+  background-color: var(--secondary-color);
+}
+
+/* =========================
+  Social Media Icons
+  ========================= */
+.fa-instagram,
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Scroll-to-top arrow icon */
+.fa-arrow-up {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Social media icons container */
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  right: 0px;
+  top: 30%;
+  gap: 1rem;
+  margin: 1rem 0;
+  z-index: 1000;
+}
+
+/* =========================
+  Article Headlines Design
+  ========================= */
+.image-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-card-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main article image */
+.image-card-container img {
+  width: 80vw;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Article image description container */
+.image-description {
+  display: flex;
+  width: 80vw;
+  text-align: center;
+  background-color: var(--secondary-color);
+}
+
+/* Article image description header */
+.image-description-header {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  padding: 1rem;
+  border-right: 2px solid var(--text-color);
+}
+
+/* Article image description paragraph */
+.image-description-paragraph {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: lighter;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+/* =========================
+  Article Cards & Container
+  ========================= */
+.article-container {
+  position: relative;
+  background-color: var(--secondary-color);
+  margin: 2rem;
+}
+
+.article-container a,
+.see-all a,
+.all-post a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* "See all" link positioning */
+.see-all  {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+}
+
+/* "All posts" link padding */
+.all-post{
+  padding: 6px 0 0 9px;
+}
+
+/* Article cards grid layout */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  grid-gap: 20px;
+  padding: 1.5rem;
+}
+
+/* Individual article card */
+.article-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Article card image hover effect */
+.article-card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Article card title */
+.article-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Articles section title */
+.articles-title {
+  text-align: center;
+}
+
+/* =========================
+  Footer Design
+  ========================= */
+.footer {
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  width: 100vw;
+  font-weight: bolder;
+  margin: 0 0 1rem 0;
+}
+
+/* Privacy policy link styling */
+.private-policy a {
+  color: inherit;
+  border-left: 3px solid var(--text-color);
+  border-right: 3px solid var(--text-color);
+  padding: 0 4px 0 4px;
+}
+
+/* Terms and conditions link styling */
+.terms-condition a{
+  color: var(--text-color);
+}
+
+/* =========================
+  Responsive Design: Large Screens
+  ========================= */
+@media (min-width: 720px) {
+  /* Hide hamburger menu on large screens */
+  .menu-toggle {
+   display: none;
+  }
+  
+  /* Logo and toggle arrangement */
+  .logo {
+    display: none;
+  }
+  
+  .logo-edit {
+    display: non;
+  }
+
+
+  /* Navigation bar styles */
+
+  .nav-list {
+   display: flex;
+   justify-content: space-between;
+   font-size: larger;
+   list-style: none;
+   padding: 1.5rem;
+   margin: 0;
+  }
+
+  .nav-item {
+   margin: 0 15px;
+  }
+
+  .nav-item a {
+   font-size: 1.5rem;
+   color: white;
+   text-decoration: none;
+  }
+
+  /* Search bar styles */
+  .search-icon {
+   position: relative;
+  }
+
+  .search-icon input {
+   padding: 7px 30px 7px 12px;
+   border: none;
+   border-radius: 20px;
+  }
+
+  /* Larger article image on desktop */
+  .image-card-container img {
+   width: 80vw;
+   height: 80vh;
+  }
+}
+
+/* =========================
+  Responsive Design: Small Screens
+  ========================= */
+@media (max-width: 720px) {
+  /* Hamburger menu positioning */
+  .menu-toggle {
+   position: relative;
+  }
+
+  /* Logo and toggle arrangement */
+  .toggle-logo {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row-reverse;
+  }
+
+  /* Mobile navigation container */
+  .nav-container {
+   display: none;
+   justify-content: center;
+   background-color: var(--secondary-color);
+   position: absolute;
+   width: 100%;
+   padding: 1rem;
+   z-index: 1000;
+  }
+
+  /* Show nav when active */
+  .nav-container.active {
+   display: flex;
+  }
+
+  /* Mobile nav list styles */
+  .nav-list{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+   list-style: none;
+   padding:0;
+   margin: 0;
+   gap: 1.9rem;
+   font-size: larger;
+   width: 100%;
+  }
+
+  .nav-item {
+   margin: 0 1.5rem;
+    z-index: 1000;
+  }
+
+  .nav-item a {
+   font-size: larger;
+   color: white;
+   text-decoration: none;
+   z-index: 1000;
+  }
+
+  /* Subheading dropdown for mobile */
+  .topic_heading {
+   position: relative;
+   margin: 0 0 1rem 0;
+   background-color: inherit;
+   color: inherit;
+   font-size: inherit;
+  }
+
+  .sub-heading {
+   display: none;
+   position: absolute;
+   background-color: var(--secondary-color);
+   width: 80vw;
+   z-index: 1000;
+  }
+
+  /* Article container adjustments for mobile */
+  .article-container {
+   align-items: center;
+   position: relative;
+   background-color: var(--secondary-color);
+   margin: 2rem 0;
+  }
+
+  /* Stack articles vertically on mobile */
+  .articles {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   width: 100%;
+  }
+
+  .article-card {
+   width: 100%;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .article-card img {
+   width: 100%;
+   height: auto;
+  }
+
+  .article-card img:hover {
+   transform: scale(1.05);
+   transition: transform 0.3s ease;  
+  }
+  /* Removed duplicate .image-description-paragraph flex styles for consistency */
+}
